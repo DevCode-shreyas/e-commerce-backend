@@ -23,7 +23,7 @@ export const getDashboardStats = TryCatch(async (req, res, next) => {
         };
         const thisMonthProductsPromise = Product.find({
             createdAt: {
-                $get: thisMonth.start,
+                $gte: thisMonth.start,
                 $lte: thisMonth.end,
             },
         });
