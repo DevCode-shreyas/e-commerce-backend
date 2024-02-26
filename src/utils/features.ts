@@ -17,7 +17,6 @@ export const invalidateCache = ({
   order,
   admin,
   userId,
-  orde1r,
   orderId,
   productId,
 }: InvalidateCacheProps) => {
