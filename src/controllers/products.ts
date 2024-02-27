@@ -34,6 +34,8 @@ export const newProduct = TryCatch(
       photo: photo.path,
     });
 
+    invalidateCache({ product: true, admin: true });
+
     return res.status(201).json({
       success: true,
       message: "Product created successfully",

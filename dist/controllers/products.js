@@ -22,6 +22,7 @@ export const newProduct = TryCatch(async (req, res, next) => {
         category: category.toLowerCase(),
         photo: photo.path,
     });
+    invalidateCache({ product: true, admin: true });
     return res.status(201).json({
         success: true,
         message: "Product created successfully",
